@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+   <bean id="student" class="com.SpringProject.di.setterconstructor.Student">
+       <constructor-arg index="0" value="1"/>
+       <constructor-arg index="1" value="Ritesh"/>
+       <property name="mark" ref="mark"/>
+       </bean>
+    <bean id = "mark" class ="com.SpringProject.di.setterconstructor.Mark">
+        <property name="mark1" value="50" />
+        <property name="mark2" value="60"/>
+        <property name="mark3" value="90" />
+        <property name="mark4" value="100"/>
+    </bean>
+</beans>
+

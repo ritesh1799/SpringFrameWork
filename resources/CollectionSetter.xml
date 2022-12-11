@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <bean id="bank" class="com.collection.Bank">
+        <property name="bankList">
+            <list>
+                <value>HDFC</value>
+                <value>SBI</value>
+                <value>BOB</value>
+                <value>PNB</value>
+            </list>
+        </property>
+
+        <property name="bankSet">
+            <set>
+                <value>HDFC1</value>
+                <value>SBI1</value>
+                <value>BOB1</value>
+                <value>PNB1</value>
+            </set>
+        </property>
+
+        <property name="bankMap">
+            <map>
+                <entry  key="1" value="SBI"/>
+                <entry  key="2" value="PNB"/>
+                <entry  key="3" value="HDFC"/>
+            </map>
+        </property>
+
+        <property name="bankProperties">
+            <props>
+                <prop key="one">BOB</prop>
+                <prop key="two">SBI</prop>
+                <prop key="three">HDFC</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

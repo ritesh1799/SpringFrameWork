@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    <bean id="bank" class="com.collection.constructor.Bank">
+        <constructor-arg index="0">
+            <list>
+                <value>HDFC</value>
+                <value>SBI</value>
+                <value>BOB</value>
+                <value>PNB</value>
+            </list>
+        </constructor-arg>
+
+        <constructor-arg  index="1">
+            <set>
+                <value>HDFC1</value>
+                <value>SBI1</value>
+                <value>BOB1</value>
+                <value>PNB1</value>
+                <value>PNB1</value>
+            </set>
+        </constructor-arg>
+
+        <constructor-arg index="2">
+            <map>
+                <entry  key="1" value="SBI"/>
+                <entry  key="2" value="PNB"/>
+                <entry  key="3" value="HDFC"/>
+            </map>
+        </constructor-arg>
+
+        <constructor-arg index="3">
+            <props>
+                <prop key="one">SBI</prop>
+                <prop key="two">HDFC</prop>
+                <prop key="three">PNB</prop>
+            </props>
+        </constructor-arg>
+
+    </bean>
+</beans>
